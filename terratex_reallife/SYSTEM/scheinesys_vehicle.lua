@@ -24,13 +24,11 @@ function enterVehicle(thePlayer, seat, jacked, door)
                 end
             elseif (isCar(vehid)) then
                 if (vioGetElementData(thePlayer, "autoLic") < 1) then
-                    showError(thePlayer, "Du kannst das nicht benutzen. Sie besitzen keinen Fuehrerschein!")
-                    cancelEvent()
+                    outputChatBox("Du besitzt keinen Führerschein. Pass auf, dass du nicht erwischt wirst!")
                 end
             elseif (isBike(vehid)) then
                 if (vioGetElementData(thePlayer, "bikeLic") < 1) and vehid ~= 448 then
-                    showError(thePlayer, "Du kannst das nicht benutzen. Sie besitzen keinen Motoradfuehrerschein!")
-                    cancelEvent()
+                    outputChatBox("Du besitzt keinen Motorradführerschein. Pass auf, dass du nicht erwischt wirst!")
                 end
             elseif (isHeli(vehid)) then
                 if (vioGetElementData(thePlayer, "heliLic") < 1) then
