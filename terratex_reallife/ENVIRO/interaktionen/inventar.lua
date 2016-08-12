@@ -365,6 +365,8 @@ function pass_cmd(thePlayer, cmd, showplayer)
                 outputChatBox(string.format("Pässe von %s: ", getPlayerName(thePlayer)), toPlayer, 255, 0, 0)
                 outputChatBox(string.format("Personalausweis: %s", imBesitz[(vioGetElementData(thePlayer, "persoLic") + 1)]), toPlayer, 255, 0, 0)
                 outputChatBox(string.format("Reisepass: %s", imBesitz[(vioGetElementData(thePlayer, "reiseLic") + 1)]), toPlayer, 255, 0, 0)
+				outputChatBox(string.format("Führerschein: %s", imBesitz[(vioGetElementData(thePlayer, "autoLic") + 1)]), toPlayer, 255, 0, 0)
+				outputChatBox(string.format("Motorradführerschein: %s", imBesitz[(vioGetElementData(thePlayer, "bikeLic") + 1)]), toPlayer, 255, 0, 0)
 
             else
                 outputChatBox("Der Spieler ist nicht in deiner Nähe!", thePlayer, 255, 0, 0)
@@ -378,6 +380,7 @@ function pass_cmd(thePlayer, cmd, showplayer)
 end
 
 addCommandHandler("pass", pass_cmd, false, false)
+
 
 
 
